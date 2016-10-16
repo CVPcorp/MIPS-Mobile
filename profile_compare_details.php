@@ -46,6 +46,7 @@ if ($num_result > 0) {
       $zipcode_cd = $row["zipcode"];
       $location_cd = $row["location"];
       $mips_cd = $row["mips"];
+      $gender = $row["gender"];
 
     }
   }
@@ -59,7 +60,7 @@ if ($num_result > 0) {
 
 <div class="navbar">
   <div class="backbutton">
-    <a href="profile_compare.php"><img src="assets/images/back_text.png" height=20></a>
+    <a href="profile_compare.php?sortby=alpha"><img src="assets/images/back_text.png" height=20></a>
   </div>
   COMPARE
 </div>
@@ -89,7 +90,7 @@ if ($num_result > 0) {
 </div>
 <div class="menunextc">
   <div class="comparezip"><?php echo $zipcode_cd; ?></div>
-  <div class="comparedist"><?php echo $location_cd; ?></div>
+  <div class="comparedist"><?php echo $location_cd; ?> miles</div>
   <div class="comparemips"><?php echo $mips_cd; ?></div>
 </div>
 </div>
@@ -99,7 +100,10 @@ if ($num_result > 0) {
 <div class="profileinfotextsmall"><?php echo $speciality;?></div>
 <hr class="divider"/>
 <br/>
-
+<div class="profileinfotextbig">Gender</div>
+<div class="profileinfotextsmall"><?php echo $gender;?></div>
+<hr class="divider"/>
+<br/>
 <div class="profileinfotextbig">Address</div>
 <div class="profileinfotextsmall">WASHINGTON TOWNSHIP MEDICAL FOUNDATION<br/>
 39500 FREMONT BLVD<br/>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Oct 15, 2016 at 05:49 PM
+-- Generation Time: Oct 16, 2016 at 02:58 AM
 -- Server version: 5.6.33
 -- PHP Version: 5.6.20
 
@@ -58,8 +58,10 @@ CREATE TABLE IF NOT EXISTS `comparedata` (
   `name` varchar(100) NOT NULL,
   `npi` varchar(50) NOT NULL,
   `zipcode` varchar(10) NOT NULL,
-  `location` varchar(15) NOT NULL,
+  `location` int(3) NOT NULL,
+  `loc` int(3) NOT NULL,
   `mips` varchar(10) NOT NULL,
+  `gender` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
@@ -67,14 +69,14 @@ CREATE TABLE IF NOT EXISTS `comparedata` (
 -- Dumping data for table `comparedata`
 --
 
-INSERT INTO `comparedata` (`id`, `name`, `npi`, `zipcode`, `location`, `mips`) VALUES
-(1, 'Eveline Li', 'NPI: 20954205720', 'CA 90815', '1.92 miles', 'MIPS 68'),
-(2, 'Catherine Newman', 'NPI: 35982713493', 'CA 94550', '2.56 miles', 'MIPS 59'),
-(3, 'Robert Taylor', 'NPI: 56984592345', 'CA 94694', '5.43 miles', 'MIPS 70'),
-(4, 'Kat Simpson', 'NPI: 68572323456', 'CA 94604', '7.8 miles', 'MIPS 63'),
-(5, 'Nockolas Shwarz', 'NPI: 86737234777', 'CA 94694', '6.77 miles', 'MIPS 61'),
-(6, 'Jasmeet Sharma', 'NPI: 34595984345', 'CA 98423', '8.90 miles', 'MIPS 76'),
-(7, 'John Smith', 'NPI: 9857453211', 'CA 93403', '10.12 miles', 'MIPS 65');
+INSERT INTO `comparedata` (`id`, `name`, `npi`, `zipcode`, `location`, `loc`, `mips`, `gender`) VALUES
+(1, 'Eveline Li', 'NPI: 20954205720', 'CA 90815', 2, 0, 'MIPS 68', 'Female'),
+(2, 'Catherine Newman', 'NPI: 35982713493', 'CA 94550', 5, 1, 'MIPS 59', 'Female'),
+(3, 'Robert Taylor', 'NPI: 56984592345', 'CA 94694', 8, 2, 'MIPS 70', 'Male'),
+(4, 'Kat Simpson', 'NPI: 68572323456', 'CA 94604', 24, 3, 'MIPS 63', 'Female'),
+(5, 'Nockolas Shwarz', 'NPI: 86737234777', 'CA 94694', 56, 4, 'MIPS 61', 'Male'),
+(6, 'Jasmeet Sharma', 'NPI: 34595984345', 'CA 98423', 84, 5, 'MIPS 76', 'Male'),
+(7, 'John Smith', 'NPI: 9857453211', 'CA 93403', 102, 6, 'MIPS 65', 'Male');
 
 -- --------------------------------------------------------
 
@@ -116,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `masterdata` (
 --
 
 INSERT INTO `masterdata` (`id`, `ach`, `email`, `password`, `pic`, `name`, `fname`, `lname`, `state`, `sname`, `npi`, `tin`, `mscore`, `mustage`, `payout`, `ccn`, `mgroup`, `speciality`, `zipcode`, `city`, `address`, `phone`, `education`, `acceptsMedicare`, `cmecredits`) VALUES
-(1, 2, '', 'd41d8cd98f00b204e9800998ecf8427e', 'dr.png', 'David Bruce Richardson', 'David', 'Richardson', 'CA', 'David', '1083630784', '583826543', '67', '2', '$ 7840', '675634', 'LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH', 'Clinical Social Worker', 92807, 'Anaheim', '411 N Lakeview Ave', '(714) 378-7000', 'Washington Medical College', 'YES', 23),
+(1, 2, 'david.richardson@qmail.com', '55fc5b709962876903785fd64a6961e5', 'dr.png', 'David Bruce Richardson', 'David', 'Richardson', 'CA', 'David', '1083630784', '583826543', '67', '2', '$ 7840', '675634', 'LOS ANGELES COUNTY DEPARTMENT OF MENTAL HEALTH', 'Physician', 92807, 'Anaheim', '411 N Lakeview Ave', '(714) 378-7000', 'Washington Medical College', 'YES', 23),
 (2, 3, 'meganantonio@qmail.com', 'cccc919d78a60f72258a4d37cc192520', 'ma.png', 'Megan Antonio Bonaccorsi ', 'Megan', 'Bonaccorsi', 'CA', 'Megan', '1811142177', '674258543', '56', '2', '$ 8125', '475346', 'KAISER FOUNDATION HP, INC.', 'Internal Medicine', 92120, 'San Diego', '4405 Vandever Ave', '(619) 528-5000', 'Jefferson University', 'NO', 56),
 (3, 0, 'duncanchang@qmail.com', 'b97233812fb62ae09c2d67a568176448', 'dc.png', 'Duncan Hwan Chang', 'Duncan', 'Chang', 'CA', 'Duncan', '1811171333', '845247953', 'N/A', '1', 'N/A', '854235', 'GARY CHEN MD INC', 'Physical Therapy', 90015, 'Los Angeles', '1513 S GRAND AVE\r\n208 CALIFORNIA ORTHOPEDIC INSTITUTE', '(213) 705-8088', 'University of Southern California', 'YES', 38),
 (4, 1, 'johnmathews@qmail.com', '6e0b7076126a29d5dfcbd54835387b7b', 'jm.png', 'John Mathews', 'John', 'Mathews', 'TX', 'John', '1659493658', '764245743', '73', '1', '$ 4289', '864356', 'TEXAS ONCOLOGY PA', 'Medical Oncology', 75246, 'Dallas', '3410 WORTH ST\r\n730 TEXAS ONCOLOGY SAMMONS 7TH FLOOR', '(214) 370-1000', 'MEDICAL CITY DALLAS HOSPITAL', 'YES', 65),

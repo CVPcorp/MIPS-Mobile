@@ -9,6 +9,60 @@ include 'header.php';
 include 'scripts.php';
 ?>
 
+
+<?php
+$sortby = $_GET['sortby'];
+$filterby = $_GET['filterby'];
+if($sortby == "") {
+  $sortby == "alpha";
+}
+if($sortby == "alpha") {
+  $query_string_cd = "select * from comparedata ORDER by name ASC";
+}
+
+if($sortby == "distance") {
+    $query_string_cd = "select * from comparedata ORDER by loc ASC";
+}
+
+if($sortby == "scoreh2l") {
+  $query_string_cd = "select * from comparedata ORDER by mips DESC";
+}
+
+if($sortby == "scorel2h") {
+  $query_string_cd = "select * from comparedata ORDER by mips ASC";
+}
+
+if($filterby == "5") {
+$query_string_filter = "select * from comparedata where location < 5";
+}
+
+if($filterby == "10") {
+$query_string_filter = "select * from comparedata where location < 10";
+}
+
+if($filterby == "15") {
+$query_string_filter = "select * from comparedata where location < 15";
+}
+
+if($filterby == "20") {
+$query_string_filter = "select * from comparedata where location < 20";
+}
+
+if($filterby == "25") {
+$query_string_filter = "select * from comparedata where location < 25";
+}
+
+if($filterby == "50") {
+$query_string_filter = "select * from comparedata where location < 50";
+}
+
+if($filterby == "100") {
+$query_string_filter = "select * from comparedata where location < 100";
+}
+
+?>
+
+
 <?php
 
 $uid = $_SESSION['userid'];
@@ -35,10 +89,26 @@ if (mysqli_num_rows($query) > 0) {
       $npi = $row["npi"];
       $sname = $row["sname"];
       $speciality = $row["speciality"];
+      $gender[] = $row["gender"];
     }
   }
 
-  $query_string_cd = "select * from comparedata";
+if($filterby != "") {
+  $query_cd = mysqli_query($conn,$query_string_filter);
+  $num_result = mysqli_num_rows($query_cd);
+  if ($num_result > 0) {
+      while($row = mysqli_fetch_assoc($query_cd)) {
+        $id_cd[] = $row["id"];
+        $name_cd[] = $row["name"];
+        $npi_cd[] = $row["npi"];
+        $zipcode_cd[] = $row["zipcode"];
+        $location_cd[] = $row["location"];
+        $mips_cd[] = $row["mips"];
+        $gender[] = $row["gender"];
+      }
+    }
+}
+else {
   $query_cd = mysqli_query($conn,$query_string_cd);
   $num_result = mysqli_num_rows($query_cd);
   if ($num_result > 0) {
@@ -49,8 +119,10 @@ if (mysqli_num_rows($query) > 0) {
         $zipcode_cd[] = $row["zipcode"];
         $location_cd[] = $row["location"];
         $mips_cd[] = $row["mips"];
+        $gender[] = $row["gender"];
       }
     }
+  }
 
 ?>
 
@@ -97,10 +169,11 @@ if (mysqli_num_rows($query) > 0) {
   <div class="profileinfotextbig"><?php echo $name_cd[$i]; ?></div>
   <div class="profileinfotitle"><?php echo $npi_cd[$i]; ?></div>
   <div class="profileinfotextsmall"><?php echo $speciality;?></div>
+  <div class="profileinfotextsmall"><?php echo $gender[$i];?></div>
 </div>
 <div class="menunextc">
   <div class="comparezip"><?php echo $zipcode_cd[$i]; ?></div>
-  <div class="comparedist"><?php echo $location_cd[$i]; ?></div>
+  <div class="comparedist"><?php echo $location_cd[$i]; ?> miles</div>
   <div class="comparemips"><?php echo $mips_cd[$i]; ?></div>
 </div>
 </div>

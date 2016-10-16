@@ -14,7 +14,7 @@ include 'scripts.php';
   <div class="backbutton">
     <a href="about_mips_pc.php"><img src="assets/images/back_text.png" height=20></a>
   </div>
-CPIA
+Improvement Activities
 </div>
 
 <div class="content">
@@ -24,14 +24,14 @@ CPIA
 
 <div class="about_article clearfix">
 
-<div class="about_title">SCORING THE CPIA PERFORMANCE CATEGORY</div>
+<div class="about_title">SCORING THE IMPROVEMENT ACTIVITIES PERFORMANCE CATEGORY</div>
 <br/><br/>
 
 <br/><br/>
 <center><img src="assets/images/mips_categories_CPIA.png" width="100%"></center>
 
 <br/><br/>
-Due to CPIA being a new performance activity with no ability to compare a clinician’s performance to baseline data, CMS has proposed assigning points for each reported activity within two categories: medium-weighted activities (worth 10 points) and highweighted activities (worth 20 points). High-weighted activities are specific activities related to:
+Due to Improvement Activities being a new performance activity with no ability to compare a clinician’s performance to baseline data, CMS has proposed assigning points for each reported activity within two categories: medium-weighted activities (worth 10 points) and highweighted activities (worth 20 points). High-weighted activities are specific activities related to:
 <br/><br/>
 <ul>
 <li>Expanded Practice Access</li>
@@ -44,7 +44,7 @@ Due to CPIA being a new performance activity with no ability to compare a clinic
 </ul>
 <br/><br/>
 Any activity not listed as a high-weighted activity is considered to be a mediumweighted
-activity. For small practices, clinicians in rural areas or Health Professional Shortage Areas, or non-patient-facing clinicians, CMS believes that performing at least two CPIA activities is achievable and proposes to award these clinicians 30 points for any activity selected.
+activity. For small practices, clinicians in rural areas or Health Professional Shortage Areas, or non-patient-facing clinicians, CMS believes that performing at least two Improvement Activities is achievable and proposes to award these clinicians 30 points for any activity selected.
 <br/><br/>
 For the calendar year 2017 performance period, CMS has proposed a highest potential score of 60 points. Clinicians participating in a patient-centered medical home or comparable specialty practice will receive the full 60 points.
 <br/><br/>

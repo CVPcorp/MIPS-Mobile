@@ -40,6 +40,34 @@ if (mysqli_num_rows($query) > 0) {
 
 ?>
 
+<?php
+
+$sortorder = $_POST["sort"];
+
+if(isset($_POST["submit"])) {
+
+if(isset($_POST["sort"])) {
+if($sortorder == "1") {
+  $sort = "alpha";
+}
+
+if($sortorder == "2") {
+  $sort = "distance";
+}
+
+if($sortorder == "3") {
+  $sort = "scoreh2l";
+}
+
+if($sortorder == "4") {
+  $sort = "scorel2h";
+}
+
+header('Location: https://www.sgstudio4.com/cvp/test/profile_compare.php?sortby=' . $sort);
+
+}
+}
+?>
 
 <body class="about">
 
@@ -56,7 +84,7 @@ if (mysqli_num_rows($query) > 0) {
 <div class="spaced"></div>
 
 <div class="about_article">
-
+<form action="profile_compare_sort.php" method="POST">
 <div class="about_title">
 
   <div class="menu clearfix">
@@ -80,8 +108,14 @@ if (mysqli_num_rows($query) > 0) {
   </div>
 
   <br/><br/><br/>
-    <center><button class = "loginbt" onClick="location.href='profile_compare.php'"
-       name="applybt">APPLY CHANGES</button></center>
+    <!-- <center><button class = "loginbt" onClick="location.href='profile_compare.php?sort='"
+       name="applybt">APPLY CHANGES</button></center> -->
+       <center>
+
+         <input type="submit" id='submit' name='submit' value="APPLY CHANGES" class="loginbt"/>
+       </form>
+     </center>
+
 </div>
 
 

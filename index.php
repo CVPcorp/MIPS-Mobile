@@ -59,13 +59,13 @@ include 'scripts.php';
 ?>
 
 
-<body class="login">
+<body class="login" style="color: #333333;">
 <div class="navbar">
 PROFILE
 </div>
 
-<div class="logo">
-<img src="assets/images/cmslogo.png" width="200px">
+<div class="logo" style="color: #333333;">
+<img src="assets/images/cmslogo.png" width="200px" alt="CMS Logo"/>
 </div>
 <center>
 <div class="logotext">
@@ -74,12 +74,13 @@ PROFILE
   <form action="?action=login" method="POST">
              <div class="errormsg"><?php echo $error; ?></div>
 <br/>
-             <input type = "text" class="loginip"
+
+             <input alt="username" type = "text" class="loginip"
                 name = "username" placeholder = "email" value="<?php echo $email;?>"><br/>
-             &nbsp;<input type = "password" class = "loginip"
+             &nbsp;<input alt="password" type = "password" class = "loginip"
                 name = "password" placeholder = "password">
                 <br/>
-             <input class = "loginbt" type = "submit"
+             <input alt="submit" class = "loginbt" type = "submit"
                 name="login" value="Login">
 </form>
 
@@ -97,10 +98,10 @@ Need an account? <br/><br/>
 
 
 <div class="tabbar clearfix">
-<div class="tabs"><a href="index.php"><img src="assets/images/tab_profile_blue.png" class="tabimg"></a></div>
-<div class="tabs"><a href="about.php"><img src="assets/images/tab_about_grey.png" class="tabimg"></a></div>
-<div class="tabs"><a href="news.php"><img src="assets/images/tab_news_grey.png" class="tabimg"></a></div>
-<div class="tabs"><a href="cme.php"><img src="assets/images/tab_cme_grey.png" class="tabimg"></a></div>
+<div class="tabs"><a href="index.php"><img src="assets/images/tab_profile_blue.png" class="tabimg" alt="Profile"></a></div>
+<div class="tabs"><a href="about.php"><img src="assets/images/tab_about_grey.png" class="tabimg" alt="About"></a></div>
+<div class="tabs"><a href="news.php"><img src="assets/images/tab_news_grey.png" class="tabimg" alt="News"></a></div>
+<div class="tabs"><a href="cme.php"><img src="assets/images/tab_cme_grey.png" class="tabimg" alt="CME"></a></div>
 </div>
 
 

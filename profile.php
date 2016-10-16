@@ -89,7 +89,7 @@ PROFILE
 
 <div style="clear:both;"></div>
   <div class="compare">
-    <a href="profile_compare.php"><img src="assets/images/compare_bt.png" width=120/></a>
+    <a href="profile_compare.php?sortby=alpha"><img src="assets/images/compare_bt.png" width=120/></a>
   </div>
 </div>
 
