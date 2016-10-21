@@ -5,7 +5,7 @@
 <?php
 $login = $_SESSION['login'];
 if($login == "true") {
-header('Location: https://www.sgstudio4.com/cvp/test/profile.php');
+header('Location: http://'.$_SERVER['HTTP_HOST'].'profile.php');
 }
 
 $email = $_GET["email"];
@@ -22,7 +22,7 @@ if (isset($_POST['login']) && !empty($_POST['username'])
 
                // Database Operations
 
-               $servername = "localhost";
+               $servername = "sgstudio4.com";
                $username = "sgstudio_mips";
                $password = "MIPSroot";
                $dbname = "sgstudio_mips";
@@ -40,12 +40,12 @@ if (isset($_POST['login']) && !empty($_POST['username'])
                  $_SESSION['valid'] = true;
                  $_SESSION['timeout'] = time();
                  $_SESSION['userid'] = $row["id"];
-                 header('Location: https://www.sgstudio4.com/cvp/test/profile.php');
+                 header('Location: http://'.$_SERVER['HTTP_HOST'].'profile.php');
                }
              }
                else {
                  $error = "Invalid Credentials. Please try again.";
-                 header('Location: https://www.sgstudio4.com/cvp/test/index.php?error=' . $error . '&email=' . $username2);
+                 header('Location: http://'.$_SERVER['HTTP_HOST'].'index.php?error=' . $error . '&email=' . $username2);
                }
           }
 
