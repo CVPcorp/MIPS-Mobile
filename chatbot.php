@@ -5,7 +5,7 @@
 <?php
 $login = $_SESSION['login'];
 if($login != "true") {
-header('Location: https://www.sgstudio4.com/cvp/test/index.php');
+header('Location: http://'.$_SERVER['HTTP_HOST'].'/index.php');
 }
 ?>
 <?php
@@ -22,51 +22,51 @@ $uid = $_SESSION['userid'];
 $rand = rand(1,10);
 switch($rand) {
   case 1:
-  $rlink = "<a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_1.php'>Advancing Care Information</a> and <a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_2.php'>Quality</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a>";
+  $rlink = "<a href='about_mips_pc_1.php'>Advancing Care Information</a> and <a href='about_mips_pc_2.php'>Quality</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a>";
   $random1 = "You can have a look at the following links on ways you can improve.";
   $random2 = "Let me know if you have any other questions.";
   break;
   case 2:
-  $rlink = "<a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_2.php'>Quality</a> and <a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_4.php'>Improvement Activities</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a>";
-  $random1 = "Here are some links to find more about MIPS.";
+  $rlink = "<a href='about_mips_pc_2.php'>Quality</a> and <a href='about_mips_pc_4.php'>Improvement Activities</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a>";
+  $random1 = "Here are some links to find out more about MIPS.";
   $random2 = "I hope it helps.";
   break;
   case 3:
-  $rlink = "<a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_3.php'>Cost</a> and <a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_4.php'>Improvement Activities</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a>";
-  $random1 = "You can try some of this links.";
+  $rlink = "<a href='about_mips_pc_3.php'>Cost</a> and <a href='about_mips_pc_4.php'>Improvement Activities</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a>";
+  $random1 = "You can try some of these links.";
   $random2 = "I'm sure you will find these links useful. <br/>You can talk to a real person at <a href='tel:18009009999'>(1800) 900-9999</a>";
   break;
   case 4:
-  $rlink = "<a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_4.php'>Improvement Activities</a> and <a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_1.php'>Advancing Care Information</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a> ";
+  $rlink = "<a href='about_mips_pc_4.php'>Improvement Activities</a> and <a href='about_mips_pc_1.php'>Advancing Care Information</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a> ";
   $random1 = "Take a look at some of these articles.";
   $random2 = "I'm sure you will find these articles useful.";
   break;
   case 5:
-  $rlink = "<a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_2.php'>Quality</a> and <a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_3.php'>Cost</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a> ";
-  $random1 = "Why don't you have a look at this?";
+  $rlink = "<a href='about_mips_pc_2.php'>Quality</a> and <a href='about_mips_pc_3.php'>Cost</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a> ";
+  $random1 = "Why don't you have a look at these?";
   $random2 = "Hope you find some of these useful.  <br/>You can talk to a real person at <a href='tel:18009009999'>(1800) 900-9999</a>";
   break;
   case 6:
-  $rlink = "<a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_4.php'>Improvement Activities</a> and <a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_2.php'>Quality</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a>";
+  $rlink = "<a href='about_mips_pc_4.php'>Improvement Activities</a> and <a href='about_mips_pc_2.php'>Quality</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a>";
   $random1 = "This would proabably be helpful to you.";
   $random2 = "I'm always here to help you.  <br/>You can talk to a real person at <a href='tel:18009009999'>(1800) 900-9999</a>";
   break;
   case 7:
-  $rlink = "<a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_2.php'>Quality</a> and <a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_3.php'>Cost</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a> ";
-  $random1 = "This might be helpful to you.";
+  $rlink = "<a href='about_mips_pc_2.php'>Quality</a> and <a href='about_mips_pc_3.php'>Cost</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a> ";
+  $random1 = "These might be helpful to you.";
   $random2 = "Let me know if you need further help.";
   break;
   case 8:
-  $rlink = "<a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_1.php'>Advancing Care Information</a> and <a href='https://www.sgstudio4.com/cvp/test/about_mips_pc_3.php'>Cost</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a> ";
+  $rlink = "<a href='about_mips_pc_1.php'>Advancing Care Information</a> and <a href='about_mips_pc_3.php'>Cost</a>. More information at <a href='https://qpp.cms.gov/learn/qpp' target='_blank'>https://qpp.cms.gov/learn/qpp</a> ";
   $random1 = "Let me check...Here is what I found on the web for MIPS";
   $random2 = "I'm sure you will find these links useful.";
   case 9:
-  $rlink = "Sorry I can't help you on this. You can talk to a real person at <a href='tel:18009009999'>(1800) 900-9999</a>";
+  $rlink = "Sorry I can't help you with this topic. You can talk to a real person at <a href='tel:18009009999'>(1800) 900-9999</a>";
   $random1 = "<a href='tel:18009009966'>(1800) 900-9966</a>";
   $random2 = "";
   break;
   case 10:
-  $rlink = "Sorry I can't help you on this. You can talk to a real person at <a href='tel:18009009999'>(1800) 900-9999</a>";
+  $rlink = "Sorry I can't help you with this topic. You can talk to a real person at <a href='tel:18009009999'>(1800) 900-9999</a>";
   $random1 = "<a href='tel:18009009966'>(1800) 900-9966</a>";
   $random2 = "";
   break;
