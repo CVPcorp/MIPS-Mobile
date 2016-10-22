@@ -23,6 +23,6 @@
 <meta name="description" content="Merit-Based Incentive Payment System"/>
 <meta name="robots" content="index,follow,archive" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="shortcut icon" href="https://www.sgstudio4.com/cvp/assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
